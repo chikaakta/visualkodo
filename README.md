@@ -15,9 +15,6 @@ We use an api tu save the projects of the users so that they can use it latter, 
 
 
 API documentation :
-
-API url : https://visualkodo.permafrhost.fr
-
 Method post
 
 sign up : /signup.php
