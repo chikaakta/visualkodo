@@ -19,7 +19,7 @@ Method post
 
 sign up : /signup.php
 
-```json
+```JSON
 Request:
 {
 	"email" : "varchar",
@@ -30,10 +30,10 @@ Request:
 	"gender" : "varchar"
 }
 Return:
-	{
-	"MESSAGE": "USER CREATED SUCEFFULY" OR "EMAIL ALREADY REGISTER",
+{
+	"MESSAGE": "USER CREATED SUCEFFULY" OR  "EMAIL ALREADY REGISTER",
 	"STATUS": 200
-	}
+}
 ```
 
 sign in : /signin.php
