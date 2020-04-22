@@ -11,7 +11,7 @@ Realize in react -comming soon-
 
 BACKEND
 We use an api tu save the projects of the users so that they can use it latter, the API is realized in PHP connected to a mariaDB database on our server.
-
+password is encrypted to protect your acount, so only you have access to it.
 
 
 API documentation :
