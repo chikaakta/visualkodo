@@ -11,7 +11,7 @@
     include '../api/verifyPassword.php';
 
     $data = array();
-    $sql = "SELECT json FROM code WHERE idproject IN (SELECT projectid FROM project WHERE title='{$projectName}' AND ownerid IN (SELECT userid FROM users WHERE email='{$email}'))";
+    $sql = "SELECT jsoncode FROM code WHERE idproject IN (SELECT projectid FROM project WHERE title='{$projectName}' AND ownerid IN (SELECT userid FROM users WHERE email='{$email}'))";
     $table_data = $mysql->query($sql);
 
     while($row = $table_data->fetch_array(MYSQLI_ASSOC)){
@@ -20,7 +20,7 @@
 
     if(count($data)>0){
         //need to update
-        $sql = "UPDATE code SET json='{$jsoncode}' WHERE idproject IN (SELECT projectid FROM project WHERE title='{$projectName}' AND ownerid IN (SELECT userid FROM users WHERE email='{$email}'))";
+        $sql = "UPDATE code SET jsoncode='{$jsoncode}' WHERE idproject IN (SELECT projectid FROM project WHERE title='{$projectName}' AND ownerid IN (SELECT userid FROM users WHERE email='{$email}'))";
         if($mysql->query($sql)){
             $responce["MESSAGE"] = "CODE UPDATED SUCESFULLY";
             $responce["STATUS"] = 200;
@@ -31,7 +31,7 @@
     }
     else{
         //need to inse
-    $sql = "INSERT INTO code (json, idproject) VALUES('{$jsoncode}', (SELECT projectid FROM project WHERE title='{$projectName}' AND ownerid IN (SELECT userid FROM users WHERE email='{$email}')))";
+    $sql = "INSERT INTO code (jsoncode, idproject) VALUES('{$jsoncode}', (SELECT projectid FROM project WHERE title='{$projectName}' AND ownerid IN (SELECT userid FROM users WHERE email='{$email}')))";
     if($mysql->query($sql)){
         $responce["MESSAGE"] = "CODE SAVED SUCESFULLY";
         $responce["STATUS"] = 200;

@@ -10,7 +10,7 @@
     include '../api/verifyPassword.php';
 
     $data = array();
-    $sql = "SELECT json FROM code WHERE idproject IN (SELECT projectid FROM project WHERE title='{$projectName}' AND ownerid IN (SELECT userid FROM users WHERE email='{$email}'))";
+    $sql = "SELECT jsoncode FROM code WHERE idproject IN (SELECT projectid FROM project WHERE title='{$projectName}' AND ownerid IN (SELECT userid FROM users WHERE email='{$email}'))";
     $table_data = $mysql->query($sql);
 
     while($row = $table_data->fetch_array(MYSQLI_ASSOC)){
