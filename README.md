@@ -19,24 +19,22 @@ Method post
 
 sign up : /signup.php
 
-	Request:
-	-email
-	-username
-	-password
-	-firstname
-	-lastname
-	-gender
-	
-	Return:
-	"USER CREATED SUCEFFULY"
-	"EMAIL ALREADY REGISTER"
-	example:
-	```json
-		{
-		"MESSAGE": "USER CREATED SUCEFFULY",
-		"STATUS": 200
-		}
-	```
+```json
+Request:
+{
+	"email" : "varchar",
+	"username" : "varchar",
+	"password" : "varchar",
+	"lastname" : "varchar",
+	"firstname" : "varchar",
+	"gender" : "varchar"
+}
+Return:
+	{
+	"MESSAGE": "USER CREATED SUCEFFULY" OR "EMAIL ALREADY REGISTER",
+	"STATUS": 200
+	}
+```
 
 sign in : /signin.php
 
