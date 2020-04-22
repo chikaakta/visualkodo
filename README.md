@@ -30,7 +30,13 @@ sign up : /signup.php
 	Return:
 	"USER CREATED SUCEFFULY"
 	"EMAIL ALREADY REGISTER"
-
+	example:
+	```json
+		{
+		"MESSAGE": "USER CREATED SUCEFFULY",
+		"STATUS": 200
+		}
+	```
 
 sign in : /signin.php
 

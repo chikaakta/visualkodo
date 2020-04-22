@@ -5,7 +5,7 @@
 
     if( $_POST['username'] && $_POST['password'] && $_POST['email'] && $_POST['lastname'] && $_POST['firstname'] && $_POST['gender']){
 
-        if($_POST['gender'] = 'other'){
+        if($_POST['gender'] == 'other'){
             $responce["MESSAGE"] = "GENDER CANNOT BE UNDEFINED";
             $responce["STATUS"] = 400;
         }
