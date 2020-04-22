@@ -29,7 +29,7 @@
             else{
 
 
-                $sql = "INSERT INTO users(email,username,password,lastname,firstname) VALUES ('{$_POST['email']}','{$_POST['username']}','{$password}','{$_POST['lastname']}','{$_POST['firstname']}');";
+                $sql = "INSERT INTO users(email,username,password,lastname,firstname,gender) VALUES ('{$_POST['email']}','{$_POST['username']}','{$password}','{$_POST['lastname']}','{$_POST['firstname']}','{$_POST['gender']}');";
                 if($mysql->query($sql)){
                     $responce["MESSAGE"] = "USER CREATED SUCEFFULY";
                     $responce["STATUS"] = 200;
