@@ -17,6 +17,13 @@ password is encrypted to protect your acount, so only you have access to it.
 API documentation :
 Method post
 
+please be aware that every request where you need to use your password can return :
+```json
+{
+    "MESSAGE": "WRONG PASSWORD",
+    "STATUS": 401
+}
+```
 create an acount : /signup.php
 
 ```JSON
