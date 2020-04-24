@@ -166,25 +166,40 @@ Return:
 ```
 
 add the code to a specific project : /addcode.php
+```json
+Request:
+{
+	"email" : "varchar",
+	"password" : "varchar",
+	"title" : "varchar", //project title
+	"codejson" : "varchar"
+}
 
-	Request:
-	-email
-	-password
-	-title
-	-codejson
-
-	Return:
-	"CODE UPDATED SUCESFULLY"
-	"CODE SAVED SUCESFULLY"
-	"QUERRY ERROR" (mostly when you use a title project that do not exist)
+Return:
+{
+    "MESSAGE": "CODE UPDATED SUCESFULLY",
+    "STATUS": 200
+}
+==============================================
+{
+    "MESSAGE": "CODE SAVED SUCESFULLY",
+    "STATUS": 200
+}
+```
 	
 
 delete a project : /delproject.php
+```json
+Request:
+{
+	"email" : "test",
+	"password" : "test",
+	"title" : "name1"
+}
 
-	Request:
-	-email
-	-password	
-	-title
-
-	Return:
-	"CODE AND PROJECT REMOVED"
+Return:
+{
+    "MESSAGE": "CODE AND PROJECT REMOVED",
+    "STATUS": 200
+}
+```
