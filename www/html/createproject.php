@@ -7,7 +7,7 @@
         $password = $_POST['password'];
         $projectName = $_POST['title'];
         $ispublic = $_POST['public'];
-        $jsoncode
+        $jsoncode = "[{name: 'Main.class',type: 'class',variables: '',code: [{modifier: 'public static',type: 'void',name: 'main',parameters: 'String[] args',instructions: [],}],}]";
         include '../api/verifyPassword.php';
 
         $data = array();
