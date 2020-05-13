@@ -30,12 +30,6 @@
         }
     }
     else{
-        //need to inse
-    $sql = "INSERT INTO code (jsoncode, idproject) VALUES('{$jsoncode}', (SELECT projectid FROM project WHERE title='{$projectName}' AND ownerid IN (SELECT userid FROM users WHERE email='{$email}')))";
-    if($mysql->query($sql)){
-        $responce["MESSAGE"] = "CODE SAVED SUCESFULLY";
-        $responce["STATUS"] = 200;
-    }else{
             $responce["MESSAGE"] = "QUERRY ERROR";
             $responce["STATUS"] = 400;
     }
